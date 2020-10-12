@@ -1,0 +1,7 @@
+{
+  "name": "MjpgViewer",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
