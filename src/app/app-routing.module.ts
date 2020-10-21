@@ -1,3 +1,4 @@
+import { DataResolverService } from './resolver/data-resolver.service';
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
@@ -11,6 +12,11 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'video',
+    loadChildren: () => import('./video/video.module').then( m => m.VideoPageModule)
+  }
+  
 ];
 
 @NgModule({

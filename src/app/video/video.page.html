@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Video Streaming</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card *ngIf="urlVideo != Null">
+    <ion-card-header>
+      <ion-card-subtitle>Transmitiendo desde {{urlVideo}}</ion-card-subtitle>
+    </ion-card-header>
+    <div class="contenedor">
+      <ion-img class="sizeimg" src={{urlVideo}} alt="ERROR IMAGES" > </ion-img>
+    </div>
+  </ion-card>
+  <ion-card *ngIf="urlVideo == Null">
+    <ion-card-header>
+      <ion-card-subtitle>ERROR</ion-card-subtitle>
+    </ion-card-header>
+    <div class="contenedor">
+      <ion-img class="sizeimg" src= "assets/errorImg.jpg" alt="ERROR IMAGES" > </ion-img>
+    </div>
+  </ion-card>
+  <ion-footer>
+    <ion-toolbar color="primary">
+      <ion-button fill="clear" expand="full" color="light" (click)="capturar()" >
+        <ion-icon slot="start" name="camera"></ion-icon>
+        Tomar Foto</ion-button>
+    </ion-toolbar>
+  </ion-footer>
+
+</ion-content>

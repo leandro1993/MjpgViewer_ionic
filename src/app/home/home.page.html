@@ -1,20 +1,44 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
+    <ion-title class="ion-text-center">
+      MJPG-VIEWER
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content slot="fixed" class="contMain">
+  
+  <ion-item>
+    <img class="imgLogo" src="assets/camara2.png" alt="No image">
+  </ion-item>
+  
+<ion-item>
+  <ion-label class="ion-text-center" color="primary">
+    <p>Ingrese la direccion IP de la cámara</p>
+  </ion-label>
+</ion-item>
+<ion-card>
+  <ion-item>
+    <ion-input class="numberIP"   type="number" maxlength="3" [(ngModel)]="IP_1" ></ion-input>
+    <ion-label > . </ion-label>
+    <ion-input class="numberIP"  type="number" maxlength="3" [(ngModel)]="IP_2" ></ion-input>
+    <ion-label > . </ion-label>
+    <ion-input class="numberIP"  type="number" maxlength="3" [(ngModel)]="IP_3" ></ion-input>
+    <ion-label > . </ion-label>
+    <ion-input  class="numberIP" type="number" maxlength="3" [(ngModel)]="IP_4" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating"> Puerto </ion-label>
+    <ion-input  inputmode="numeric" [(ngModel)]="puerto" ></ion-input>
+  </ion-item>
+</ion-card>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-button fill="clear" expand="full" color="light" (click)="conectar()" >
+      <ion-icon slot="start" name="camera"></ion-icon>
+      Iniciar Cámara</ion-button>
+  </ion-toolbar>
+</ion-footer>
