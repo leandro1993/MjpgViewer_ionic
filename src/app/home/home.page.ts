@@ -10,13 +10,11 @@ import { DataService } from '../services/data.service';
 })
 export class HomePage {
 
-  private puerto: string = "8080";
-  private IP_1: string = "192";
-  private IP_2: string = "168";
-  private IP_3: string = "1";
-  private IP_4: string = "6";
-
-
+  private puerto: string = "";
+  private IP_1: string = "";
+  private IP_2: string = "";
+  private IP_3: string = "";
+  private IP_4: string = "";
 
   constructor(private router: Router, private dataService: DataService) { }
   
